@@ -1,69 +1,81 @@
 return {
-  {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
 
-    dependencies = {
-      "mason-org/mason.nvim",
-    },
+		dependencies = {
+			"mason-org/mason.nvim",
+		},
 
-    opts = {
-      ensure_installed = {
-        "clang-format",
-        "stylua",
-      },
+		opts = {
+			ensure_installed = {
+				"clang-format",
+				"stylua",
+			},
 
-      run_on_start = true,
-      start_delay = 3000,
-    },
-  },
+			run_on_start = true,
+			start_delay = 3000,
+		},
+	},
 
-  {
-    "stevearc/conform.nvim",
+	{
+		"stevearc/conform.nvim",
 
-    event = {
-      "BufWritePre",
-    },
+		event = {
+			"BufWritePre",
+		},
 
-    cmd = {
-      "ConformInfo",
-    },
+		cmd = {
+			"ConformInfo",
+		},
 
-    keys = {
-      {
-        "<leader>f",
-        function()
-          require("conform").format({
-            async = true,
-            lsp_format = "fallback",
-          })
-        end,
-        desc = "Format file",
-      },
-    },
+		keys = {
+			{
+				"<leader>f",
+				function()
+					require("conform").format({
+						async = true,
+						lsp_format = "fallback",
+					})
+				end,
+				desc = "Format file",
+			},
 
-    opts = {
-      formatters_by_ft = {
-        c = {
-          "clang_format",
-        },
+			-- {
+			-- 	"<leader>cf",
+			-- 	function()
+			-- 		require("conform").format({
+			-- 			async = true,
+			-- 			lsp_format = "fallback",
+			-- 		})
+			-- 	end,
+			-- 	mode = { "n", "v" },
+			-- 	desc = "Format code",
+			-- },
+		},
 
-        cpp = {
-          "clang_format",
-        },
+		opts = {
+			formatters_by_ft = {
+				c = {
+					"clang_format",
+				},
 
-        python = {
-          "ruff_format",
-        },
+				cpp = {
+					"clang_format",
+				},
 
-        lua = {
-          "stylua",
-        },
-      },
+				python = {
+					"ruff_format",
+				},
 
-      format_on_save = {
-        timeout_ms = 1000,
-        lsp_format = "fallback",
-      },
-    },
-  },
+				lua = {
+					"stylua",
+				},
+			},
+
+			-- format_on_save = {
+			--   timeout_ms = 1000,
+			--   lsp_format = "fallback",
+			-- },
+		},
+	},
 }

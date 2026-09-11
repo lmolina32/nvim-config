@@ -9,7 +9,7 @@ return {
 		keys = {
 			{
 				"<leader>ef",
-				"<cmd>NvimTreeFocus<CR>",
+				"<cmd>NvimTreeFocus<cr>",
 				desc = "Focus file explorer",
 			},
 			{

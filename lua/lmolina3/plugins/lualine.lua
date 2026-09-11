@@ -1,28 +1,28 @@
 return {
-  {
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
+	{
+		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
 
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
 
-    opts = {
-      options = {
-        theme = "auto",
-        globalstatus = true,
-        icons_enabled = true,
+		opts = {
+			options = {
+				theme = "auto",
+				globalstatus = true,
+				icons_enabled = true,
 
-        component_separators = {
-          left = "",
-          right = "",
-        },
+				component_separators = {
+					left = "",
+					right = "",
+				},
 
-        section_separators = {
-          left = "",
-          right = "",
-        },
-      },
-    },
-  },
+				section_separators = {
+					left = "",
+					right = "",
+				},
+			},
+		},
+	},
 }
