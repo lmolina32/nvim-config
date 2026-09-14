@@ -29,3 +29,23 @@ local function toggle_maximize()
 end
 
 vim.keymap.set("n", "<leader>z", toggle_maximize, { desc = "Toggle window maximize" })
+
+-- Horizontal terminal at the bottom
+vim.keymap.set("n", "<leader>th", function()
+  vim.cmd("botright split")
+  vim.cmd("resize 15")
+  vim.cmd("terminal")
+  vim.cmd("startinsert")
+end, { desc = "Terminal: horizontal" })
+
+-- Vertical terminal on the right
+vim.keymap.set("n", "<leader>tv", function()
+  vim.cmd("botright vsplit")
+  vim.cmd("terminal")
+  vim.cmd("startinsert")
+end, { desc = "Terminal: vertical" })
+
+-- Leave terminal-input mode
+vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], {
+  desc = "Exit terminal mode",
+})
