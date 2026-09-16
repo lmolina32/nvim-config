@@ -11,9 +11,9 @@ return {
 
 		opts = {
 			keymap = {
-				preset = "enter",
-				-- preset = "default",
-				-- preset = "super-tab"
+				-- preset = "enter",
+				preset = "default",
+				preset = "super-tab"
 			},
 
 			appearance = {
