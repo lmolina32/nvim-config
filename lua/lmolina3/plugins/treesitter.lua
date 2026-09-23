@@ -17,6 +17,10 @@ return {
         "vim",
         "vimdoc",
         "query",
+        "html",
+        "javascript",
+        "typescript",
+        "tsx",
       })
 
       vim.api.nvim_create_autocmd("FileType", {
@@ -28,6 +32,10 @@ return {
           "vim",
           "vimdoc",
           "query",
+          "html",
+          "javascript",
+          "typescript",
+          "tsx",
         },
 
         callback = function(event)

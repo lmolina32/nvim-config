@@ -10,6 +10,8 @@ return {
 			ensure_installed = {
 				"clang-format",
 				"stylua",
+				"ruff",
+				"prettierd",
 			},
 
 			run_on_start = true,
@@ -37,20 +39,9 @@ return {
 						lsp_format = "fallback",
 					})
 				end,
+				mode = { "n", "v" },
 				desc = "Format file",
 			},
-
-			-- {
-			-- 	"<leader>cf",
-			-- 	function()
-			-- 		require("conform").format({
-			-- 			async = true,
-			-- 			lsp_format = "fallback",
-			-- 		})
-			-- 	end,
-			-- 	mode = { "n", "v" },
-			-- 	desc = "Format code",
-			-- },
 		},
 
 		opts = {
@@ -70,6 +61,21 @@ return {
 				lua = {
 					"stylua",
 				},
+
+				html = { "prettierd" },
+				css = { "prettierd" },
+				scss = { "prettierd" },
+				less = { "prettierd" },
+
+				javascript = { "prettierd" },
+				javascriptreact = { "prettierd" },
+				typescript = { "prettierd" },
+				typescriptreact = { "prettierd" },
+
+				json = { "prettierd" },
+				jsonc = { "prettierd" },
+				yaml = { "prettierd" },
+				markdown = { "prettierd" },
 			},
 
 			-- format_on_save = {
